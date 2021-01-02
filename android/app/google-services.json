@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1018802320806",
+    "firebase_url": "https://cuchito-prueba.firebaseio.com",
+    "project_id": "cuchito-prueba",
+    "storage_bucket": "cuchito-prueba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1018802320806:android:566a4abd3f56b0f840cb67",
+        "android_client_info": {
+          "package_name": "com.cuchito1.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1018802320806-hrq4nbe58fhef5kjl5nvtih9lvfghaqn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cuchito1.app",
+            "certificate_hash": "4007d663db3d6d9bf3c87f847700031ea733b750"
+          }
+        },
+        {
+          "client_id": "1018802320806-7lnhdndgrhl5mbr0ol6lu38sbnhbp3h2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJQB63P2c8SWoLTizafNPW-vH7LjTKjyc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1018802320806-7lnhdndgrhl5mbr0ol6lu38sbnhbp3h2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
