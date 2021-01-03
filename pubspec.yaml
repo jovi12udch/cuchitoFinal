@@ -66,6 +66,7 @@ flutter:
     - assets/images/foto1.png
     - assets/images/foto3.png
     - assets/paw_icon.png
+    - assets/background1.jpg
 
   fonts:
      - family: Billabong
