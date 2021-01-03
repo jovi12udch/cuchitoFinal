@@ -17,6 +17,7 @@ AppBar header(context,
           ),
         ),
         child: Icon(Icons.pin_drop_outlined),
+        backgroundColor: Colors.transparent,
       )
     ],
     iconTheme: IconThemeData(
@@ -33,6 +34,6 @@ AppBar header(context,
       overflow: TextOverflow.ellipsis,
     ),
     centerTitle: true,
-    backgroundColor: Theme.of(context).accentColor,
+    backgroundColor: Colors.transparent,
   );
 }
