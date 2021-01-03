@@ -238,7 +238,7 @@ class _LoginState extends State<Login> {
                         ),
                         keyboardType: TextInputType.emailAddress,
                         validator: (input) =>
-                            input.isEmpty ? 'Ingrese su email' : null,
+                            input.isEmpty ? 'Ingrese su email' : isSignIn,
                         onSaved: (input) => _usuario = input,
                         style: TextStyle(fontSize: 20, color: Colors.white),
                       ),
