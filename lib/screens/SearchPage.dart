@@ -32,30 +32,27 @@ class _SearchPageState extends State<SearchPage>
   AppBar searchPageHeader() {
     return AppBar(
       automaticallyImplyLeading: false,
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       title: TextFormField(
-        style: TextStyle(fontSize: 18.0, color: Colors.white),
+        style: TextStyle(fontSize: 18.0, color: Colors.black),
         controller: searchTextEditingController,
         decoration: InputDecoration(
           hintText: 'Busca aqui...',
           hintStyle: TextStyle(color: Colors.grey),
           enabledBorder: UnderlineInputBorder(
-            borderSide: BorderSide(color: Colors.grey),
+            borderSide: BorderSide(color: Colors.green),
           ),
           focusedBorder: UnderlineInputBorder(
-            borderSide: BorderSide(color: Colors.white),
+            borderSide: BorderSide(color: Colors.green),
           ),
           filled: true,
           prefixIcon: Icon(
             Icons.person_pin,
-            color: Colors.white,
+            color: Colors.black,
             size: 30.0,
           ),
           suffixIcon: IconButton(
-              icon: Icon(
-                Icons.clear,
-                color: Colors.white,
-              ),
+              icon: Icon(Icons.clear, color: Colors.black),
               onPressed: emptyTheTextFormField),
         ),
         onFieldSubmitted: controlSearching,
@@ -72,7 +69,7 @@ class _SearchPageState extends State<SearchPage>
           children: [
             Icon(
               Icons.group,
-              color: Colors.grey,
+              color: Colors.white,
               size: 200.0,
             ),
             Text(
@@ -80,7 +77,7 @@ class _SearchPageState extends State<SearchPage>
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: Colors.white,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w100,
                   fontSize: 65.0),
             ),
           ],
@@ -112,7 +109,7 @@ class _SearchPageState extends State<SearchPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       appBar: searchPageHeader(),
       body: futureSearchResult == null
           ? displayNoSearchResultScreen()
@@ -128,9 +125,9 @@ class UserResult extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(3.0),
+      padding: EdgeInsets.all(2.0),
       child: Container(
-        color: Colors.white54,
+        color: Colors.black12,
         child: Column(
           children: [
             GestureDetector(
