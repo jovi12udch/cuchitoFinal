@@ -71,7 +71,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
     return Scaffold(
       key: _scaffoldGlobalKey,
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.transparent,
         iconTheme: IconThemeData(color: Colors.black),
         title: Text(
           "Editar perfil",
@@ -81,7 +81,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
           IconButton(
             icon: Icon(
               Icons.done,
-              color: Colors.white,
+              color: Colors.blue[700],
               size: 30.0,
             ),
             onPressed: () => Navigator.pop(context),
@@ -128,7 +128,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                         padding:
                             EdgeInsets.only(top: 10.0, left: 50.0, right: 50.0),
                         child: RaisedButton(
-                          color: Colors.red,
+                          color: Colors.transparent,
                           onPressed: logoutUser,
                           child: Text(
                             "Cerrar sesion",
@@ -157,14 +157,15 @@ class _EditProfilePageState extends State<EditProfilePage> {
       children: [
         Padding(
           padding: EdgeInsets.only(
-            top: 13.0,
+            top: 50.0,
           ),
           child: Text(
             "Nombre de perfil",
-            style: TextStyle(color: Colors.grey),
+            style: TextStyle(color: Colors.black),
           ),
         ),
         TextField(
+          maxLength: 15,
           style: TextStyle(color: Colors.black),
           controller: profileNameTextEditingController,
           decoration: InputDecoration(
@@ -190,7 +191,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
       children: [
         Padding(
           padding: EdgeInsets.only(
-            top: 13.0,
+            top: 50.0,
           ),
           child: Text(
             "Bio",
@@ -198,6 +199,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
           ),
         ),
         TextField(
+          maxLength: 65,
           style: TextStyle(color: Colors.black),
           controller: bioTextEditingController,
           decoration: InputDecoration(
@@ -205,14 +207,18 @@ class _EditProfilePageState extends State<EditProfilePage> {
             enabledBorder: UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.grey),
             ),
-            focusedBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: Colors.black),
-            ),
+            focusedBorder: newMethod(),
             hintStyle: TextStyle(color: Colors.grey),
             errorText: _profileNameValid ? null : "Bio es muy larga",
           ),
         ),
       ],
+    );
+  }
+
+  UnderlineInputBorder newMethod() {
+    return UnderlineInputBorder(
+      borderSide: BorderSide(color: Colors.black),
     );
   }
 }
