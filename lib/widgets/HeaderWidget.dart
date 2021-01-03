@@ -16,7 +16,7 @@ AppBar header(context,
             builder: (context) => GoogleMapScreen(),
           ),
         ),
-        child: Icon(Icons.pin_drop_outlined),
+        child: Icon(Icons.place),
         backgroundColor: Colors.transparent,
       )
     ],
