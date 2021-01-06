@@ -353,7 +353,7 @@ class _ProfilePageState extends State<ProfilePage> {
           decoration: BoxDecoration(
               color: following ? Colors.transparent : Colors.green,
               border: Border.all(color: Colors.white),
-              borderRadius: BorderRadius.circular(3.0)),
+              borderRadius: BorderRadius.circular(5.0)),
         ),
       ),
     );
