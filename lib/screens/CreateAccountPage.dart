@@ -30,32 +30,41 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.white,
       key: _scaffoldkey,
-      appBar: header(context,
-          srtTittle: "Configura tu usuario", disappearedBackButton: false),
+      appBar:
+          header(context, srtTittle: "CUCHITO", disappearedBackButton: false),
       body: ListView(
         children: [
           Container(
             child: Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(top: 26.0),
+                  padding: EdgeInsets.only(top: 50.0, bottom: 25),
                   child: Center(
                     child: Text(
-                      'Configuracion de usuario',
-                      style: TextStyle(fontSize: 26.0),
+                      'Configura tu Usuario',
+                      style: TextStyle(
+                        fontSize: 26.0,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                 ),
+                Icon(
+                  Icons.face,
+                  color: Colors.green,
+                  size: 100,
+                ),
                 Padding(
-                  padding: EdgeInsets.all(17.0),
+                  padding: EdgeInsets.only(
+                      top: 17.0, bottom: 50, left: 17, right: 17),
                   child: Container(
                     child: Form(
                       key: _formKey,
                       autovalidate: true,
                       child: TextFormField(
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: Colors.black),
                         validator: (val) {
                           if (val.trim().length < 5 || val.isEmpty) {
                             return "el usuario es muy corto";
@@ -76,7 +85,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                             borderSide: BorderSide(color: Colors.white),
                           ),
                           border: OutlineInputBorder(),
-                          labelText: 'nombre de usuario',
+                          labelText: 'Nombre de usuario',
                           labelStyle: theme.textTheme.caption
                               .copyWith(color: Colors.black, fontSize: 15.0),
                           hintText: "Debe ser de al menos 5 caracteres",
@@ -89,19 +98,19 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                 GestureDetector(
                   onTap: submitUsername,
                   child: Container(
-                    height: 55.0,
-                    width: 360.0,
+                    height: 40.0,
+                    width: 250.0,
                     decoration: BoxDecoration(
-                      color: Colors.green,
-                      borderRadius: BorderRadius.circular(8.0),
+                      color: Colors.red,
+                      borderRadius: BorderRadius.circular(10.0),
                     ),
                     child: Center(
                       child: Text(
                         'Continuar',
                         style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.w400,
                         ),
                       ),
                     ),
