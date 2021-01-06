@@ -20,7 +20,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
       SnackBar snackBar =
           SnackBar(content: Text('Bienvenido a cuchito: ' + username));
       _scaffoldkey.currentState.showSnackBar(snackBar);
-      Timer(Duration(seconds: 4), () {
+      Timer(Duration(seconds: 2), () {
         Navigator.pop(context, username);
       });
     } else {}
@@ -82,7 +82,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                             borderSide: BorderSide(color: Colors.grey),
                           ),
                           focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.white),
+                            borderSide: BorderSide(color: Colors.black),
                           ),
                           border: OutlineInputBorder(),
                           labelText: 'Nombre de usuario',
@@ -110,7 +110,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20.0,
-                          fontWeight: FontWeight.w400,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ),
