@@ -71,8 +71,8 @@ class _EditProfilePageState extends State<EditProfilePage> {
     return Scaffold(
       key: _scaffoldGlobalKey,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        iconTheme: IconThemeData(color: Colors.black),
+        backgroundColor: Colors.green,
+        iconTheme: IconThemeData(color: Colors.white),
         title: Text(
           "Editar perfil",
           style: TextStyle(color: Colors.white),
@@ -81,7 +81,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
           IconButton(
             icon: Icon(
               Icons.done,
-              color: Colors.blue[700],
+              color: Colors.white,
               size: 30.0,
             ),
             onPressed: () => Navigator.pop(context),
@@ -96,7 +96,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   child: Column(
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(top: 16.0, bottom: 7.0),
+                        padding: EdgeInsets.only(top: 30.0, bottom: 7.0),
                         child: CircleAvatar(
                           radius: 52.0,
                           backgroundImage:
@@ -120,7 +120,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                           child: Text(
                             "Actualizar",
                             style:
-                                TextStyle(color: Colors.black, fontSize: 16.0),
+                                TextStyle(color: Colors.green, fontSize: 16.0),
                           ),
                         ),
                       ),
@@ -128,7 +128,6 @@ class _EditProfilePageState extends State<EditProfilePage> {
                         padding:
                             EdgeInsets.only(top: 10.0, left: 50.0, right: 50.0),
                         child: RaisedButton(
-                          color: Colors.transparent,
                           onPressed: logoutUser,
                           child: Text(
                             "Cerrar sesion",
@@ -155,13 +154,17 @@ class _EditProfilePageState extends State<EditProfilePage> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Icon(Icons.account_box, color: Colors.green),
         Padding(
           padding: EdgeInsets.only(
-            top: 50.0,
+            top: 5.0,
           ),
           child: Text(
             "Nombre de perfil",
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w600,
+                fontSize: 18.0),
           ),
         ),
         TextField(
@@ -169,12 +172,12 @@ class _EditProfilePageState extends State<EditProfilePage> {
           style: TextStyle(color: Colors.black),
           controller: profileNameTextEditingController,
           decoration: InputDecoration(
-            hintText: "Escribe el nombre del perfil aqui",
+            hintText: "",
             enabledBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: Colors.grey),
+              borderSide: BorderSide(color: Colors.green),
             ),
             focusedBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: Colors.black),
+              borderSide: BorderSide(color: Colors.green),
             ),
             hintStyle: TextStyle(color: Colors.grey),
             errorText:
@@ -189,13 +192,17 @@ class _EditProfilePageState extends State<EditProfilePage> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Icon(Icons.article_outlined, color: Colors.green),
         Padding(
           padding: EdgeInsets.only(
-            top: 50.0,
+            top: 5.0,
           ),
           child: Text(
-            "Bio",
-            style: TextStyle(color: Colors.grey),
+            "Descripción",
+            style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w600,
+                fontSize: 18.0),
           ),
         ),
         TextField(
@@ -205,7 +212,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
           decoration: InputDecoration(
             hintText: "Escribe tu bio aqui",
             enabledBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: Colors.grey),
+              borderSide: BorderSide(color: Colors.green),
             ),
             focusedBorder: newMethod(),
             hintStyle: TextStyle(color: Colors.grey),
